@@ -8,20 +8,15 @@ CYAN    := \033[0;36m
 WHITE   := \033[0;37m
 RESET   := \033[0m
 
-SOURCES	=	main.cpp\
-			Cat.cpp\
-			Animal.cpp\
-			Dog.cpp\
-			WrongCat.cpp\
-			WrongAnimal.cpp
+SOURCES	=	main.cpp
 
 OBJS	=	$(SOURCES:.cpp=.o)
 
 DEPS	=	$(OBJS:.o=.d)
 
-NAME	=	Polymorph_test
+NAME	=	Interface_test
 
-CC		=	c++
+CC		=	g++
 
 #DEBUG	=	-g3
 

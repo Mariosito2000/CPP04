@@ -6,11 +6,13 @@ Cat::Cat()
 {
 	std::cout << "Cat default constructor called\n";
 	_type = "Cat";
+	_brain = new Brain();
 }
 
 Cat::~Cat()
 {
 	std::cout << "Cat default destructor called\n";
+	delete _brain;
 }
 
 Cat::Cat(const Cat &a)

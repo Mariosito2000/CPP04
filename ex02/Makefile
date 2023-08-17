@@ -10,10 +10,11 @@ RESET   := \033[0m
 
 SOURCES	=	main.cpp\
 			Cat.cpp\
-			Animal.cpp\
+			AAnimal.cpp\
 			Dog.cpp\
 			WrongCat.cpp\
-			WrongAnimal.cpp
+			WrongAnimal.cpp\
+			Brain.cpp
 
 OBJS	=	$(SOURCES:.cpp=.o)
 

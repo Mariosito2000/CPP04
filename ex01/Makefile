@@ -13,7 +13,8 @@ SOURCES	=	main.cpp\
 			Animal.cpp\
 			Dog.cpp\
 			WrongCat.cpp\
-			WrongAnimal.cpp
+			WrongAnimal.cpp\
+			Brain.cpp
 
 OBJS	=	$(SOURCES:.cpp=.o)
 

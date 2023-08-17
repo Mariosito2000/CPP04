@@ -6,11 +6,13 @@ Dog::Dog()
 {
 	std::cout << "Dog default constructor called\n";
 	_type = "Dog";
+	_brain = new Brain();
 }
 
 Dog::~Dog()
-{
+{	
 	std::cout << "Dog default destructor called\n";
+	delete _brain;
 }
 
 Dog::Dog(const Dog &a)

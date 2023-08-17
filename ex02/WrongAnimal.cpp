@@ -4,8 +4,8 @@
 
 WrongAnimal::WrongAnimal()
 {
-	std::cout << "WrongAnimal default constructor called\n";
 	_type = "WrongAnimal";
+	std::cout << "WrongAnimal default constructor called\n";
 }
 
 WrongAnimal::~WrongAnimal()
@@ -15,8 +15,8 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal::WrongAnimal(const WrongAnimal &a)
 {
-	std::cout << "WrongAnimal copy constructor called\n";
 	_type = a._type;
+	std::cout << "WrongAnimal copy constructor called\n";
 }
 
 /*---MEMBER FUNCTIONS---*/
