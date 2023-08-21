@@ -25,8 +25,12 @@ Character::Character(const Character &a)
 	_name = a.getName();
 	_nMaterias = a._nMaterias;
 	for (int i = 0; i < 4; i++)
+	{
 		if (a._materias[i] != 0)
 			_materias[i] = a._materias[i]->clone();
+		else
+			_materias[i] = 0;
+	}
 }
 
 Character::Character(std::string name)
@@ -54,7 +58,7 @@ void Character::equip(AMateria* m)
 	{
 		if (_materias[i] == 0)
 		{
-			_materias[i] = m->clone();
+			_materias[i] = m;
 			break;
 		}
 	}
@@ -63,17 +67,19 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	if (_materias[idx] == 0)
+	if (idx > 3 || idx < 0 || _materias[idx] == 0)
 	{
 		std::cout << "* can't unequip this slot *\n";
 		return;
 	}
-
+	std::cout << "* " << _materias[idx]->getType() << " spell has been unequipped *\n";
+	_materias[idx] = 0;
+	_nMaterias--;
 }
 
-void Character::use(int idx, ICharacter& target)
+void Character::use(int idx, ICharacter &target)
 {
-	if (idx >= _nMaterias || idx < 0)
+	if (idx > 3 || idx < 0 || _materias[idx] == 0)
 	{
 		std::cout << "* can't use this slot *\n";
 		return;
@@ -86,6 +92,9 @@ void Character::use(int idx, ICharacter& target)
 Character & Character::operator = (Character &a)
 {
 	_name = a.getName();
-	//copiar materias alocando memoria
+	_nMaterias = a._nMaterias;
+	for (int i = 0; i < 4; i++)
+		if (a._materias[i] != 0)
+			_materias[i] = a._materias[i]->clone();
 	return (*this);
 }

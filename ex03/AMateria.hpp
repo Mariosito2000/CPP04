@@ -6,6 +6,8 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 
@@ -27,7 +29,7 @@ public:
 
 	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
+	virtual void use(ICharacter &target);
 
 /*---OPERATORS---*/
 

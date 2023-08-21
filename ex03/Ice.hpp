@@ -3,14 +3,9 @@
 # define ICE_HPP
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
 
 class Ice: public AMateria
 {
-
-protected:
-
-	std::string	_type;
 
 public:
 
@@ -24,8 +19,8 @@ public:
 /*---MEMBER FUNCTIONS---*/
 
 	std::string const & getType() const;
-	virtual Ice* clone() const;
-	virtual void use(ICharacter& target);
+	Ice* clone() const;
+	void use(ICharacter &target);
 
 /*---OPERATORS---*/
 

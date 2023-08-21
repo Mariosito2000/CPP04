@@ -5,7 +5,7 @@
 Ice::Ice()
 {
 	std::cout << "Ice default constructor called\n";
-	_type = "Ice";
+	_type = "ice";
 }
 
 Ice::~Ice()
@@ -28,11 +28,10 @@ std::string const & Ice::getType() const
 
 Ice* Ice::clone() const
 {
-	Ice *a = new Ice();
-	return (a);
+	return (new Ice());
 }
 
-void Ice::use(ICharacter& target)
+void Ice::use(ICharacter &target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }

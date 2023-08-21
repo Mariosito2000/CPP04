@@ -8,7 +8,12 @@ CYAN    := \033[0;36m
 WHITE   := \033[0;37m
 RESET   := \033[0m
 
-SOURCES	=	main.cpp
+SOURCES	=	main.cpp\
+			Cure.cpp\
+			Ice.cpp\
+			Character.cpp\
+			AMateria.cpp\
+			MateriaSource.cpp
 
 OBJS	=	$(SOURCES:.cpp=.o)
 
@@ -16,7 +21,7 @@ DEPS	=	$(OBJS:.o=.d)
 
 NAME	=	Interface_test
 
-CC		=	g++
+CC		=	c++
 
 #DEBUG	=	-g3
 
