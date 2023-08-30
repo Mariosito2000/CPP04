@@ -19,6 +19,8 @@ Cat::Cat(const Cat &a)
 {
 	std::cout << "Cat copy constructor called\n";
 	_type = a._type;
+	_brain = new Brain();
+	*_brain = *a._brain;
 }
 
 /*---MEMBER FUNCTIONS---*/
@@ -37,6 +39,7 @@ void	Cat::makeSound() const
 
 Cat & Cat::operator = (Cat &a)
 {
-	this->_type = a._type;
+	_type = a._type;
+	*_brain = *a._brain;
 	return (*this);
 }

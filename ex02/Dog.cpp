@@ -19,6 +19,8 @@ Dog::Dog(const Dog &a)
 {
 	std::cout << "Dog copy constructor called\n";
 	_type = a._type;
+	_brain = new Brain();
+	*_brain = *a._brain;
 }
 
 /*---MEMBER FUNCTIONS---*/
@@ -37,6 +39,7 @@ void	Dog::makeSound() const
 
 Dog & Dog::operator = (Dog &a)
 {
-	this->_type = a._type;
+	_type = a._type;
+	*_brain = *a._brain;
 	return (*this);
 }
