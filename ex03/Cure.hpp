@@ -6,7 +6,6 @@
 
 class Cure: public AMateria
 {
-
 public:
 
 /*---CONS/DES---*/

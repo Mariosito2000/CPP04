@@ -6,7 +6,6 @@
 
 class MateriaSource: public IMateriaSource
 {
-
 private:
 
 	AMateria	*_materias[4];

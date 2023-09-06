@@ -8,23 +8,27 @@ void	leaks()
 {
 	system("leaks -q Polymorph_test");
 }
- */
+*/
 int main()
 {
 	//const AAnimal* meta = new AAnimal();
 	const AAnimal* j = new Dog();
 	const AAnimal* i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-
-	i->makeSound(); //will output the cat sound!
+	std::cout << "\n" << j->getType() << std::endl;
 	j->makeSound();
+
+	std::cout << "\n" << i->getType() << std::endl;
+	i->makeSound();
+	
+	//std::cout << "\n" << meta->getType() << std::endl;
 	//meta->makeSound();
 
+	std::cout << "\n";
 	delete i;
 	delete j;
 	//delete meta;
+
 	//atexit(leaks);
 	return (0);
 }

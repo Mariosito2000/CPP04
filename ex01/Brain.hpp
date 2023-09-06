@@ -7,7 +7,7 @@
 
 class Brain
 {
-protected:
+private:
 
 	std::string	_ideas[100];
 

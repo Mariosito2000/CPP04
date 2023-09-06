@@ -3,12 +3,12 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
-/* 
+
 void	leaks()
 {
 	system("leaks -q Polymorph_test");
 }
- */
+
 int main()
 {
 	const Animal* meta[100];
@@ -21,6 +21,6 @@ int main()
 		std::cout << i + 1 << "\n";
 		delete meta[i];
 	}
-	//atexit(leaks);
+	atexit(leaks);
 	return (0);
 }

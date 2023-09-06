@@ -6,10 +6,6 @@
 
 class Dog: public Animal
 {
-protected:
-
-	std::string	_type;
-
 public:
 
 /*---CONS/DES---*/
@@ -21,8 +17,8 @@ public:
 
 /*---MEMBER FUNCTIONS---*/
 
-	virtual std::string	getType() const;
-	virtual void		makeSound() const;
+	std::string	getType() const;
+	void		makeSound() const;
 
 /*---OPERATORS---*/
 

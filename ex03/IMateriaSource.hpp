@@ -6,7 +6,6 @@
 
 class IMateriaSource
 {
-
 public:
 	
 	virtual ~IMateriaSource() {}

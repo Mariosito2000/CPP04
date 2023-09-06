@@ -6,7 +6,6 @@
 
 class Ice: public AMateria
 {
-
 public:
 
 /*---CONS/DES---*/
